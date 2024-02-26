@@ -1,0 +1,79 @@
+Introducción a Trabajar con la API de The Movie Database 
+
+|----Si lees esto es porque sabes pefectamente que tanto tú cómo el redactor se van a partir todo lo que se llama neurona e incluso se van a quedar en diciembr viendo la cara a Marluchy__
+     Broma, no te diré que es una maravilla pero tampoco es una pesadez, simplemente con tener fe y concentración creo que es de mucha sobra.Por ende, mis intenciones son distintas, en 
+     realidad si estas leyendo este README de apartado JAVASCRIPT, es porque te interesa ser full backend y interactuador de APIs o porque simplemente vienes a chismosear y ya, en fin, 
+     En este readme se compone por lo siguiente:
+
+
+
+     °|--------INTRODUCCIÓN
+            1  |_Explicación de Cada JS: Api.js, detail.js, global.js, index.js, movie-card.js, movie-list.js, search.js, sidebar.js
+
+            2  |Explicación General
+
+            3  |Herramientas
+
+            4  |Trucos, Consejos y Sugerencias
+
+
+
+
+
+
+
+
+                                                                                    |1|
+
+                        °|----EXPLICACION DE CADA JS: Api.js, detail.js, global.js, index.js, movie-card.js, movie-list.js, search.js, sidebar.js
+                              | 
+                              |
+                              |
+                              |
+                              |---Api.js
+                                       |-Este código es una puerta de entrada a la base de datos de películas de The Movie Database (TMDb). Aquí hay un resumen rápido:
+
+                                        Clave de Acceso Única (api_key): Es como nuestra llave mágica para acceder a la información de TMDb.
+
+                                        URL Base de Imágenes (imageBaseURL): Nos ayuda a construir enlaces atractivos para las imágenes de las películas.
+
+                                        Función para Obtener Datos (fetchDataFromServer): Una herramienta para hacer solicitudes a TMDb, obtener información y pasarla a funciones específicas.
+
+                                        Exportación de Herramientas (export { imageBaseURL, api_key, fetchDataFromServer };): Permite que otros archivos en nuestro proyecto utilicen estas herramientas poderosas.  
+                              |
+                              |
+                              |
+                              |---Detail.js
+                                      |-  Este código es parte de una aplicación que utiliza la base de datos de películas de The Movie Database (TMDb) para mostrar detalles y recomendaciones. Veamos un resumen:
+
+                                            Configuración Inicial:
+
+                                        Importa herramientas esenciales desde archivos externos que manejan la interacción con TMDb y otras funcionalidades.
+                                        Recupera el ID de la película almacenado localmente para personalizar la página.
+                                        Obtención y Presentación de Datos:
+
+                                        Hace una solicitud a la API de TMDb para obtener detalles específicos de una película, como su trama, elenco, videos y más.
+                                        Crea dinámicamente una estructura de página detallada con la información recuperada.
+                                        Visualización de Trailers:
+
+                                        Filtra y muestra trailers y clips de la película desde YouTube en un formato de lista deslizante.
+                                        Películas Sugeridas:
+
+                                        Realiza otra solicitud a TMDb para obtener recomendaciones de películas relacionadas.
+                                        Presenta estas sugerencias de películas de manera atractiva en una sección separada.
+                                        Interactividad de Usuario:
+
+                                        Implementa una función de búsqueda para mejorar la experiencia del usuario al permitir búsquedas de películas.
+
+                             
+    
+
+
+
+
+
+
+    
+                                        Redactor se aburrio...
+
+    

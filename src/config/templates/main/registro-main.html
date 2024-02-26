@@ -1,0 +1,302 @@
+{% extends "./LayoutRegistroMain.html" %}
+{% block body %}
+<body>
+  <!-- header -->
+  <header>
+    <div class="header-wrapper">
+      <img src="{{ url_for('static', filename='assets/image/LogoMv3.png') }}" alt="logo" />
+      <a  href="/fronted/indexlogin" class="sign-in-btn">Sign In</a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Películas, programas de televisión y más ilimitados.</h1>
+      <h4>Mira en cualquier lugar. Cancele en cualquier momento.</h4>
+      <p>
+        ¿Listo para mirar? Ingrese su correo electrónico para crear o reiniciar su membresía.
+      </p>
+      <div class="form-container">
+        <a href="indexregister" class="Sign-up-btn">
+          Empieza YA!
+          <img src="{{ url_for('static', filename='assets/image/arrow.svg') }}" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- sections -->
+  <section>
+    <div class="section-wrapper">
+      <div>
+        <img src="{{ url_for('static', filename='assets/image/3kids.png') }}" alt="" />
+      </div>
+      <div>
+        <h2>
+          Disfruta en tu televisor, móvil o en tu Computadora</h2>
+        <p>
+         Míralo en Smart TV, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
+          jugadores y más.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reverse-section">
+    <div class="section-wrapper">
+      <div>
+        <h2>Proximamente Podrás Crear perfiles para niños.</h2>
+        <p>
+          Envía a los niños a vivir aventuras con sus personajes favoritos en un espacio
+          hecho solo para ellos, gratis con tu membresía.
+        </p>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='assets/image/ImageCell.png') }}" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-wrapper">
+      <div>
+        <img src="{{ url_for('static', filename='assets/image/3kids.png') }}" alt="" />
+      </div>
+      <div>
+        <h2>Mira por todas partes.</h2>
+        <p>
+          Transmita películas y programas de TV ilimitados en su teléfono, tableta, computadora portátil,
+          y televisión.
+        </p>
+      </div>
+    </div>
+  </section>
+<!-- Cards Content section-->
+  <section class="reverse-section">
+    <div class="section-wrapper">
+      <class id="contents" class="contents container">
+        <h2 class ="title">Descubra nuevos universos</h2>
+        <div class="contents__container">
+            <div class="contents__card">
+              <img src="{{ url_for('static', filename='assets/image/hbo-default_0.webp') }}" alt="Logo HBO" class="contents__image">
+            </div>
+            <div class="contents__card">
+              <img src="{{ url_for('static', filename='assets/image/MAX-Default.webp') }}" alt="Logo Max Originals" class="contents__image">
+            </div>
+            <div class="contents__card">
+              <img src="{{ url_for('static', filename='assets/image/DC_Default.webp') }}" alt="Logo DC" class="contents__image">
+            </div>
+            <div class="contents__card">
+                <img src="{{ url_for('static', filename='assets/image/WB-Default.webp') }}" alt="Logo Warner Bros" class="contents__image">
+            </div>
+            <div class="contents__card">
+              <img src="{{ url_for('static', filename='assets/image/CN-Default.webp') }}" alt="Logo Cartoon Network" class="contents__image">
+            </div>
+            <div class="contents__card">
+              <img src="{{ url_for('static', filename='assets/image/UCL-Default.webp') }}" alt="Logo UEFA Champions League" class="contents__image">
+            </div>
+        </div>  
+    </div>
+  </section>
+
+   <!--Subscription section-->
+   <class id="subscription" class="subscription">
+    <div class="container">
+        <h2 class="title">
+            ¡Descubre nuestros planes y ahorra en suscripciones Mensuales con pagos anticipados y Bonificaciones!
+        </h2>
+        <div class="subscription__plans">
+            <div class="subscription__card">
+                <div>
+                    <div class="subscription__plan">
+                        <h3>Trial</h3>
+                        <p class="subscription__price">
+                            R$ 0 USD
+                            <span class="text--small">/mês</span>
+                        </p>
+                    </div>
+                    <ul class="subscription__goals">
+                        <li class="subscription__description">
+                            Disfrútalo en smartphones y tablets, donde quieras, sin compromiso.
+                        </li>
+                        <li class="subscription__description">
+                          Míralo en 1 pantalla a la vez
+                        </li>
+                        <li class="subscription__description">
+                          No mas Anuncions.
+                        </li>
+                        <li class="subscription__description">
+                          Obten Ventaja con eWin
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+                <span>Al final del vencimiento se te empezará a cobrar!</span>
+                <button class="button button--gradient">
+                  Elige el plan trial
+                </button>
+            </div>
+            <div class="subscription__card">
+                <div>
+                    <div class="subscription__plan">
+                        <h3>Personal</h3>
+                        <p class="subscription__price">
+                            R$ 2.99 USD
+                            <span class="text--small">/mês</span>
+                        </p>
+                    </div>
+                    <ul>
+                        <li class="subscription__description">
+                          Disfrútalo en todos tus dispositivos.
+                        </li>
+                        <li class="subscription__description">
+                            Beneficio con el eWin
+                        </li>
+                        <li class="subscription__description">
+                          Míralo en hasta 1 pantallas al mismo tiempo.
+                        </li>
+                        <li class="subscription__description">
+                            No mas Anuncions.
+                        </li>
+                        <li class="subscription__description">
+                          Descarga tus series y películas favoritas, míralas donde y cuando quieras.
+                        </li>
+                        <li class="subscription__description">
+                            Notificaciones Personalizadas para Mantenerte al día del Contenido Exclusivo.
+                        </li>
+                    </ul>
+                </div>
+                <button class="button button--gradient">
+                    Elige el Personal
+                </button>
+            </div>
+            <div class="subscription__card">
+              <div>
+                  <div class="subscription__plan">
+                      <h3>Dúo</h3>
+                      <p class="subscription__price">
+                          R$ 3.99 USD
+                          <span class="text--small">/mês</span>
+                      </p>
+                  </div>
+                  <ul>
+                      <li class="subscription__description">
+                        Disfrútalo en todos tus dispositivos.
+                      </li>
+                      <li class="subscription__description">
+                        Beneficio con el eWin
+                      </li>
+                      <li class="subscription__description">
+                        Míralo en hasta 2 pantallas al mismo tiempo.
+                      </li>
+                      <li class="subscription__description">
+                        No mas Anuncions.
+                      </li>
+                      <li class="subscription__description">
+                        Descarga tus series y películas favoritas, míralas donde y cuando quieras.
+                      </li>
+                      <li class="subscription__description">
+                        Notificaciones Personalizadas para Mantenerte al día del Contenido Exclusivo.
+                      </li>
+                  </ul>
+              </div>
+              <button class="button button--gradient">
+                Elige el Dúo
+              </button>
+          </div>
+          
+        </div>
+    </div>
+
+
+  
+
+  <!-- faq -->
+  <div class="faq">
+    <div class="faq-wrapper">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-item">
+        <a href="#faq1" class="faq-title">Que es StreMovify?</a>
+        <div class="faq-item__content" id="faq1">  
+          StreMovify es un servicio de streaming que ofrece una amplia variedad de
+          programas de televisión, películas, anime, documentales y más galardonados en
+          miles de dispositivos conectados a Internet.
+          <br />
+          <br />
+          Puedes mirar todo lo que quieras, cuando quieras, sin necesidad de
+          comercial único, todo por un precio mensual bajo. Siempre hay
+          Se agregan algo nuevo para descubrir y nuevos programas de televisión y películas.
+          ¡cada semana!
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <a href="#faq2" class="faq-title">
+          ¿Cuánto cuesta StreMovify?</a>
+        <div class="faq-item__content" id="faq2">
+          Mire StreMovify en su teléfono inteligente, tableta, Smart TV, computadora portátil o
+          dispositivo de transmisión, todo por una tarifa mensual fija. Los planes van desde
+          De 3,99 a 11,99 dólares al mes. Sin costes extra, sin contratos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <a href="#faq3" class="faq-title">Donde lo puedo ver?</a>
+        <div class="faq-item__content" id="faq3">   
+        Mire en cualquier lugar y en cualquier momento. Inicia sesión con tu cuenta de StreMovify para mirar
+        instantáneamente en la web en StreMovify.com desde su computadora personal o
+        en cualquier dispositivo conectado a Internet que ofrezca la aplicación StreMovify,
+        incluidos televisores inteligentes, teléfonos inteligentes, tabletas y reproductores multimedia de transmisión
+        y consolas de juegos.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer form -->
+  <div class="footer-form">
+    <h3>
+    ¿Dudas, Inquietudes o Problemas? Ingresa tu Correo.
+    </h3>
+    <div class="form-container">
+      <input type="text" placeholder="Email address" />
+      <button>
+        Enviar!
+        <img src="{{ url_for('static', filename='assets/image/arrow.svg') }}" alt="" />
+      </button>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>Preguntas? Llamada ...</p>
+    <div class="footer-cols">
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Speed Test</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Watch for Free</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Ways to Watch</a></li>
+            <li><a href="#">Corporate Information</a></li>
+            <li><a href="#">Legal Notices</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Media Centre</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Netflix Originals</a></li>
+        </ul>
+        
+    </div>
+</footer>
+</body>
+{% endblock %}

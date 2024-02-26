@@ -1,0 +1,152 @@
+{% extends "./LayoutRegister.html" %}
+{% block body %}
+<body>
+  <header>
+    <div class="header-wrapper">
+      <a href="indexregistromain">
+        <img src="{{ url_for('static', filename='assets/image/LogoMv3.png') }}" alt="logo" />
+    </a>
+      <a  href="/fronted/indexlogin" class="sign-in-btn">Sign In</a>
+    </div>
+  </header>
+    <form action="#" class="form">
+      <div class="loader" id="loader">
+        <div class="loaderBar"></div>
+      </div>
+
+      <div style="text-align: center;">
+        <img src="{{ url_for('static', filename='assets/image/dispositivos.png') }}" alt="" />
+      </div>
+      <h1 class="text-center">Completa la configuración de tu cuenta</h1>
+      <small class="text-description">StreMovify está personalizado para ti. Crea una contraseña para comenzar a ver StreMovify.</small>
+      <!-- Progress bar -->
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+
+        <div
+          class="progress-step progress-step-active"
+          data-title="Email"
+        ></div>
+        <div class="progress-step" data-title="Verification"></div>
+        <div class="progress-step" data-title="Contact"></div>
+        <div class="progress-step" data-title="Plan"></div>
+      </div>
+
+      <!-- Steps 1-->
+      <div class="form-step form-step-active">
+        <label class="text-info" id="label-Step-Initial" for="Code"></label>
+        <div class="input-group">  
+          <label  class="text-email" id="email" for="email">Email</label>
+          <input type="text" name="email" id="textemail"  autocomplete="current-password" oninput="verificarDatos()"/>
+          <label class="text-info" id="label-Step-email" for="Code"></label>
+        </div>
+        <div class="input-group">
+          <label  class="text-password" for="password">Password</label>
+          <input type="password" name="password" id="password"  oninput="verificarDatos()">
+        </div>
+        <label class="text-info" id="label-Step1" for="Code"></label>
+       
+        <div class="">
+          <button href="#" type="button" onclick="VerificarEmail()"  style="display: none;" id="Next1" class="btn btn-next width-50 ml-auto">Next 1</button>
+        </div>
+      </div>
+      <!--CODE-->
+      <div class="form-step">
+        <div class="input-group">
+          <label class="text-code" id="IntroduceCodigo" for="Code">Introduce el Código</label>
+          <label class="text-info" id="label-content" for="Code"></label>   
+            <div class="container-OTP">
+                <input type="text" class="num" maxlength="1" required>
+                <input type="text" class="num" maxlength="1" required>
+                <input type="text" class="num" maxlength="1" required>
+                <input type="text" class="num" maxlength="1" required>
+            </div>
+          <label class="text-info" id="label-Code" for="Code"></label>
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <button href="#" type="button" onclick="VerificarCode()" id="btnNext2" class="btn btn-next">Next2</button>
+        </div>
+      </div>
+      <!--Basic FORMS-->
+      <div class="form-step">
+        <label class="text-info" id="label-BasicForms" for="Code"></label>
+        <div class="input-group">
+          <label class="text-username" for="username">Username</label>
+          <input type="text" name="username" id="username" />
+          <label class="text-info" id="label-Step-username" for="Code"></label>
+        </div>
+        <div class="input-group">
+          <label class="text-Fullname" for="fullname">Fullname</label>
+          <input type="text" name="fullname" id="fullname" />
+          <label class="text-info" id="label-Step-fullname" for="Code"></label>
+        </div>
+        <div class="btns-group">
+          <a href="#" id="btn-prev3" class="btn btn-prev">Previous</a>
+          <a href="#" type="button" id="next3" onclick="VerifyBasicForms()" class="btn btn-next">Next</a>
+        </div>
+      </div>
+      <!--PLANS-->
+      <div class="form-step" id="plan-step">
+        <div class="input-group">
+          <div class="col-2" name="format" id="format">
+            <h2><img src="{{ url_for('static', filename='assets/image/iconstart.png') }}" alt=""/>Nuestros Planes</h2>
+            <label for="free">
+              <input value="basic" type="radio" name="plans" id="free">
+              <span>FREE/</span>1mes
+            </label>
+            <label for="paid">
+              <input  value="trial" type="radio" name="plans" id="paid">
+              <span>Trial/<small>1mes</small></span>0$
+            </label>
+            <label for="personal">
+              <input value="personal" type="radio" name="plans" id="personal">
+              <span>Personal/<small>1mes</small></span>2.99$
+            </label>
+            <label for="duo">
+              <input value="duo" type="radio" name="plans" id="duo">
+              <span>Duo/<small>1mes</small></span>3.99$
+            </label>
+          </div>
+        </div>   
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <input type="button" value="Submit" class="btn"  onclick="SaveData()" id="planbtn">
+        </div>   
+      </div>
+    </form>
+
+    <!-- footer form -->
+        <footer class="footer">
+        <div class="container-footer">
+          <p>Preguntas? Llamada ...</p>
+          <div class="footer-cols">
+              <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Investor Relations</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Speed Test</a></li>
+              </ul>
+              <ul>
+                  <li><a href="#">Help Centre</a></li>
+                  <li><a href="#">Jobs</a></li>
+                  <li><a href="#">Cookie Preferences</a></li>
+                  <li><a href="#">Watch for Free</a></li>
+              </ul>
+              <ul>
+                  <li><a href="#">Account</a></li>
+                  <li><a href="#">Ways to Watch</a></li>
+                  <li><a href="#">Corporate Information</a></li>
+                  <li><a href="#">Legal Notices</a></li>
+              </ul>
+              <ul>
+                  <li><a href="#">Media Centre</a></li>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Netflix Originals</a></li>
+              </ul>    
+          </div>
+        </footer>
+      </div>
+</body>
+  {% endblock %}

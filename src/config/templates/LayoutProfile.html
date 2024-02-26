@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>
+         StreMovify Profile Page
+    </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta tags -->
+    <meta name="description" content="StreMovify is a popular movie app made by TeamMondongo." />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{url_for('static', filename='/assets/image/movie-roll.png')}}" type="image/svg+xml"/>
+
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/main/profile.css')}}">
+    
+   
+   
+</head>
+<body>
+ 
+  {% block body %}
+  {% endblock %}
+
+  <!---AQUI VA LOS SCRIPT-->
+  <script src="{{url_for('static', filename='js/ProfilePage.js')}}">defer</script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+  
+</body>
+</html>

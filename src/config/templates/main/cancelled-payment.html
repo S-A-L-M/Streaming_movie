@@ -1,0 +1,59 @@
+{% extends "./LayoutCancelled-payment.html" %}
+{% block body %}
+<body class="bg-purple">
+        
+    <div class="stars">
+        <div class="custom-navbar">
+            <div class="brand-logo">
+                <img src="{{ url_for('static', filename='assets/image/LogoMv3.png') }}" width="150px">
+            </div>
+            <div class="navbar-links">
+                <ul>
+                    <div class="select-menu">
+                        <div class="select">
+                          <span>Select Language</span>
+                          <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="options-list">
+                          <div class="option">English</div>
+                          <div class="option">Arabic</div>
+                          <div class="option">Hindi</div>
+                          <div class="option">Spanish</div>
+                          <div class="option">French</div>
+                          <div class="option">Japanese</div>
+                          <div class="option">Korean</div>
+                        </div>
+                      </div>
+                  <li><a href="http://salehriaz.com/404Page/404.html" target="_blank">More Informatiom</a></li>
+                  <li><a href="http://salehriaz.com/404Page/404.html" class="btn-request" target="_blank">Ayuda!</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="central-body">
+            <img class="image-404" src="http://salehriaz.com/404Page/img/404.svg" width="300px">
+            <a href="http://salehriaz.com/404Page/404.html" class="btn-go-home" target="_blank">GO BACK HOME</a>
+        </div>
+        <div class="objects">
+            <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
+            <div class="earth-moon">
+                <img class="object_earth" src="http://salehriaz.com/404Page/img/earth.svg" width="100px">
+                <img class="object_moon" src="http://salehriaz.com/404Page/img/moon.svg" width="80px">
+            </div>
+            <div class="box_astronaut">
+                <img class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140px">
+            </div>
+        </div>
+        <div class="glowing_stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+{% endblock %}

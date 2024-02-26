@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>
+        StreMovify
+    </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta tags -->
+    <meta name="description" content="StreMovify is a popular movie app made by TeamMondongo." />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{url_for('static', filename='/assets/image/movie-roll.png')}}" type="image/svg+xml"/>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+    
+    <!---AQUI VA LOS STYLES CSS-->
+     <!-- custom css link -->
+    
+    <link rel="shortcut icon" href="/image/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/main/Main.css')}}">
+    
+   
+   
+</head>
+<body>
+ 
+  {% block body %}
+  {% endblock %}
+
+  <!---AQUI VA LOS SCRIPT-->
+    <script src="{{url_for('static', filename='js/global.js')}}" defer></script>
+    <script  type="module" src="{{url_for('static', filename='js/movie-list.js')}}"></script>
+
+  
+</body>
+</html>

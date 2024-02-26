@@ -1,0 +1,17 @@
+Todo esto se ejecuta en el centro de comando estando dentro de la carpeta SISENA
+
+
+creamos maquina o entorno virtual
+
+pip install virtualenv[ESTO SE HACE DENTRO DE LA CARPETA SISENA, es decir hacemos un "cd SISENA"]
+
+virtualenv venv
+cd \venv\scripts\activate.bat
+
+[ESTO SE HACE DENTRO DE LA CARPETA ENV, es decir hacemos un "cd SISENA"]
+
+/*sacamos pip install flask flask-sqlalchemy flask-marshmallow marshmallow pymysql las librerias */
+pip freeze > requirements.txt
+/*instalamos todas las librerias*/
+
+pip install -r requirements.txt [ESTO SE HACE DENTRO DE LA CARPETA SISENA, es decir hacemos un "cd SISENA"]

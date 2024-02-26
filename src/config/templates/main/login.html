@@ -1,0 +1,78 @@
+{% extends "./LayoutLogin.html" %}
+{% block body %}
+<body>
+    <nav>
+
+        <a href="indexregistromain">  <img src="{{ url_for('static', filename='assets/image/LogoMv3.png') }}" alt="logo"></a>
+    </nav>
+    <!--FORM TO LOGIN-->
+    <div class="form-wrapper">
+        <h2>Sign In</h2>
+        <form action="">
+            <div class="form-control">
+                <input id="email-input"  type="text" required>
+                <label for="Email">Email or phone number</label>
+            </div>
+            <div class="form-control">
+                <input type="password" id="password-input" required>
+                <label for="password">Password</label>
+            </div>
+            <button type="button" onclick="Login()">Sign In</button>
+            <div class="form-help">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <a href="">Need help?</a>
+            </div>
+        </form>
+        <p>Nuevo en StreMovify? <a href="indexregistromain">Registrate Ahora</a></p>
+        <small>Esta página está protegida por Google reCAPTCHA para garantizar que no seas un bot.
+             <button id="learnMoreButton">Learn more.</button>
+
+        <div id="additionalInfo" class="hidden">
+            <small>La información recopilada por Google reCAPTCHA está sujeta a la Política de privacidad y a las Condiciones del servicio de Google, y se utiliza para proporcionar, mantener y mejorar el servicio de reCAPTCHA, así como para fines generales de seguridad (Google no la utiliza para personalizar publicidad).
+            </small>
+        </div>
+    </div>
+    <!-- footer form -->
+  <div class="footer-form">
+    <div class="form-container">
+        <img src="./assets/arrow.svg" alt="" />
+      </button>
+    </div>
+  </div>
+  <footer class="footer">
+        <p>Preguntas? Llamada ...</p>
+        <div class="footer-cols">
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Speed Test</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Watch for Free</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Ways to Watch</a></li>
+            <li><a href="#">Corporate Information</a></li>
+            <li><a href="#">Legal Notices</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Media Centre</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Netflix Originals</a></li>
+        </ul>
+        
+    </footer>
+</body>
+
+
+
+{% endblock %}

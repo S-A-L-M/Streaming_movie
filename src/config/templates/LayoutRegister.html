@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>
+         StreMovify Sign Up Page
+    </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta tags -->
+    <meta name="description" content="StreMovify is a popular movie app made by TeamMondongo." />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{url_for('static', filename='/assets/image/movie-roll.png')}}" type="image/svg+xml"/>
+
+    <!-- google font link -->
+
+    
+    <!----AQUI VA LOS STYLES CSS-->
+     <!-- custom css link -->
+    
+    <link rel="shortcut icon" img src="{{ url_for('static', filename='assets/image/logo.svg') }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/main/Register.css')}}">
+    
+    
+   
+   
+</head>
+<body>
+ 
+  {% block body %}
+  {% endblock %}
+
+  <!---AQUI VA LOS SCRIPT-->
+  <script src="{{url_for('static', filename='js/register.js')}}"></script>
+  <script src="{{url_for('static', filename='js/apitransacti.js')}}" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+
+
+  
+</body>
+</html>

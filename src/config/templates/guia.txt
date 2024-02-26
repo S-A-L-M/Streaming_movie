@@ -1,0 +1,11 @@
+
+
+GUIA PARA EL HTML 
+
+SIMPLEMENTE CADA INDEX QUE ESTA EN LA CARPETA MAIN TIENE SU PROPIO LAYOUT
+
+PERO, ¿Por qué no hicistes una layout para todos?
+
+Simplemente es por el hecho de que al tener un layout todo junto, la pagina se verá con todo el contenido que no hace parte de él, es decir
+
+Si hacemos eso, en el pagina principal, no solo estará todo lo correspondiente a eso, sino también las movie-list de forma desordenado y no queresmos eso
