@@ -1,6 +1,7 @@
 from config.db import db, app, ma
 from sqlalchemy import Numeric
 from datetime import datetime, timedelta
+from model.doomBotEmail import DoomBotEmail
 
 class BotCorreos(db.Model):
     __tablename__ = "tblbotcorreos"
@@ -25,14 +26,18 @@ class BotCorreos(db.Model):
 with app.app_context():
     db.create_all()
 
-    # # Verificar si ya hay registros en la tabla  |
-    # if BotCorreos.query.count() == 0:            |
-    #     # Crear registros de cuentas             | 
-    #     bot1 = BotCorreos()                      | -----> SI QUIERES LA POSIBILIDAD DE Disfrutar EL CONTENIDO COMPLETO DE CÓDIGO DEL DESIGN GMAIL, IMPORTA EN LA CARPETA 'RESOURCESSQL' AL XAMPP
-        
-                                                    
-    #     db.session.add_all([bot1])               |
-    #     db.session.commit()
+    if BotCorreos.query.count() == 0:
+        # Crear registros de cuentas
+        bot1 = BotCorreos(
+            version=10.10,
+            nombre='Send Emails',
+            sender_email='stremovify@gmail.com',
+            sender_password='ovkblgkretkotakw',
+            subject='Stremovify Verification Code',
+            body=DoomBotEmail
+        )
+        db.session.add_all([bot1])
+        db.session.commit()
 
 class BotCorreosSchema(ma.Schema):
     class Meta:
