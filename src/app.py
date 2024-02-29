@@ -1,7 +1,6 @@
 #favor mantener todo organizado
 from flask import Flask,  redirect, request, jsonify, json, session, render_template
 from config.db import db, app, ma
-from model.user import User, UserSchema  
 
 
 #Importar los model (Tabla de la base de datos)
@@ -89,7 +88,7 @@ app.register_blueprint(routes_cancelledpayment, url_prefix="/fronted")
 app.register_blueprint(routes_sucesspayment, url_prefix="/fronted")
 
 
-
+from model.user import User, UserSchema  
 @app.route("/")
 def index():
     if 'user_id' in session:
