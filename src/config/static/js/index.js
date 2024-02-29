@@ -323,7 +323,8 @@ document.addEventListener("DOMContentLoaded", function() {
           .then(function(response) {
               // Eliminar el token del almacenamiento local
               localStorage.removeItem('token');
-
+              // Eliminar el username del almacenamiento local
+              localStorage.removeItem('user_id');
               // Redirigir al usuario a la página principal
               window.location.href = '/fronted/indexregistromain';
           })

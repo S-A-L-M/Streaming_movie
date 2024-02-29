@@ -19,12 +19,14 @@ function Login() {
         .then(function(response) {
             // Si la respuesta del servidor es exitosa, obtenemos el token generado
             const token = response.data.token;
+            const idUser = response.data.user_id;
 
             // Verificamos si se recibió un token
             if (token) {
                 // Puedes almacenar el token en el local storage o en una cookie para usarlo posteriormente
                 // Aquí, almacenamos el token en el local storage
                 localStorage.setItem('token', token);
+                localStorage.setItem('user_id', idUser);
 
                 // Redirigimos al usuario a la página principal
                 window.location.href = '/fronted/indexmain';

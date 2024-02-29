@@ -279,6 +279,7 @@ def saveUsuarios():
         return {
             "status": 200,
             "message": "Inicio de sesión exitoso",
+            "user_id":new_user.id,
             "nombre_usuario": username
         }
 

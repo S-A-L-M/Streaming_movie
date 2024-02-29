@@ -25,6 +25,7 @@ def login():
     if user:
         # Verificar si el usuario ya tiene un token asignado
         if user.id_token:
+            idUser = user.id
             # Si ya tiene un token, sobrescribirlo
             existing_token = Token.query.get(user.id_token)
             existing_token.token = secrets.token_urlsafe(32)
@@ -51,7 +52,7 @@ def login():
         session['user_id'] = user.id
 
         # Crear la respuesta JSON con el token
-        response_body = {'message': 'Inicio de sesión exitoso', 'token': existing_token.token if existing_token else new_token}
+        response_body = {'message': 'Inicio de sesión exitoso', 'user_id':user.id, 'token': existing_token.token if existing_token else new_token}
         status = 200
     else:
         # Si las credenciales no son válidas, envíe un mensaje de error

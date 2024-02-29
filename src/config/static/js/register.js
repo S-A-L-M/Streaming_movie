@@ -691,6 +691,7 @@ function SaveData() {
         })
         .then((response) => {
             console.log(response.data);
+            alert(response.data)
 
             // Verificar si la solicitud fue exitosa
             if (response.status === 200) {
@@ -702,6 +703,7 @@ function SaveData() {
 
                 // Guardar el token en el localStorage
                 localStorage.setItem('token', token);
+                localStorage.setItem('user_id', idUser);
 
                 // Redirigir a la página principal
                 window.location.href = '/fronted/indexmain';
